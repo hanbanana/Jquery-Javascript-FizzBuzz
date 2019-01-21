@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>FizzBuzz</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <div id="listHere"></div>
+
+    <script type="text/javascript">
+
+        var mainList = $("#listHere");
+
+        function fizzBuzz() {
+            for (var i = 0; i <= 100; i++) {
+                var list = document.createElement("li");
+
+                if (i % 3 === 0 && i % 5 === 0) {
+                    list.innerHTML = "FizzBuzz";
+                    console.log("FizzBuzz");
+                }
+                else if (i % 3 === 0) {
+                    list.innerHTML = "Fizz";
+                    console.log("Fizz");
+                }
+
+                else if (i % 5 === 0) {
+                    list.innerHTML = "Buzz";
+                    console.log("Buzz");
+                }
+
+                else {
+                    list.innerHTML = i;
+                    console.log(i);
+                }
+                mainList.append(list);
+            }
+
+        };
+
+        fizzBuzz();
+
+    </script>
+
+
+</body>
+
+</html>
